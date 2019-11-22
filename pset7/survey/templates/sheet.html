@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <table id="list" class="table">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">E-Mail</th>
+                <th scope="col">School</th>
+                <th scope="col">Location</th>
+                <th scope="col">Standing</th>
+                <th scope="col">Areas of Interest</th>
+            </tr>
+        </thead>
+        {{ rows|safe }}
+    </table>
+
+{% endblock %}

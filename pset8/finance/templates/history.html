@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <table id="list" class="table">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">Date/Time</th>
+                <th scope="col">Stock</th>
+                <th scope="col">Symbol</th>
+                <th scope="col">Shares Exchanged</th>
+                <th scope="col">Share Value</th>
+                <th scope="col">Order Value</th>
+                <th scope="col">Order Type</th>
+            </tr>
+        </thead>
+        {{ rows | safe }}
+    </table>
+{% endblock %}

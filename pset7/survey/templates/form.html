@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <!-- http://getbootstrap.com/docs/4.1/content/typography/ -->
+    <h1 class="mb-3">Form</h1>
+
+    <!-- http://getbootstrap.com/docs/4.1/components/forms/ -->
+    <form action="/form" method="post">
+
+        <div class="form-group mx-sm-3 mb-2">
+            <label for="name">Name</label>
+            <input id="name" type="text" class="form-control" name="name" placeholder="Jane Doe"><br>
+            <label for="email">E-Mail</label>
+            <input id="email" type="email" class="form-control" name="email" placeholder="jdoe@example.com">
+        </div><br>
+        <div class="form-group mx-sm-3 mb-2">
+            <label for="school">School</label>
+            <input id="school" class="form-control" type="text" name="school" placeholder="Doe University">
+        </div>
+        <div class="form-group mx-sm-3 mb-2">
+            <label for="location">Location</label>
+            <input id="location" type="text" class="form-control" name="location" placeholder="City, State, Country">
+        </div>
+        <div class="form-group mx-sm-3 mb-2">
+            <label for="standing">Standing</label>
+            <select id="standing" class="form-control" name="standing">
+                <option disabled="disabled" selected="selected">Select One</option>
+                <option value="Freshman">Freshman</option>
+                <option value="Sophomore">Sophomore</option>
+                <option value="Junior">Junior</option>
+                <option value="Senior">Senior</option>
+                <option value="Graduate Student">Graduate Student</option>
+                <option value="Post-Grad">Post-Grad</option>
+                <option value="Post-Doc">Post-Doc</option>
+            </select>
+        </div><br>
+        <div class="form-group mx-sm-3 mb-2">
+            <label>Specializations/Interests</label>
+            <div id="interest">
+                <input id="interest1" type="checkbox" name="interest"
+                    value="Computer and Network Security">
+                <label for="interest1">Computer and Network Security</label><br>
+                <input id="interest2" type="checkbox" name="interest"
+                    value="Mobile and Web Computing">
+                <label for="interest2">Mobile and Web Computing</label><br>
+                <input id="interest3" type="checkbox" name="interest"
+                    value="Human-Computer Interaction">
+                <label for="interest3">Human-Computer Interaction</label><br>
+                <input id="interest4" type="checkbox" name="interest"
+                    value="Software Engineering">
+                <label for="interest4">Software Engineering</label><br>
+                <input id="interest5" type="checkbox" name="interest"
+                    value="Bioinformatics">
+                <label for="interest5">Bioinformatics</label><br>
+                <input id="interest6" type="checkbox" name="interest"
+                    value="Information Management and Data Analytics">
+                <label for="interest6">Information Management and Data Analytics</label><br>
+                <input id="interest7" type="checkbox" name="interest"
+                    value="Artificial Intelligence">
+                <label for="interest7">Artificial Intelligence</label>
+            </div><br>
+        </div>
+
+        <!-- http://getbootstrap.com/docs/4.1/components/buttons/ -->
+        <button class="btn btn-primary" type="submit">Submit</button>
+
+    </form>
+
+    <script src="static/form.js">
+    </script>
+
+{% endblock %}
